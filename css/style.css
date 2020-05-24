@@ -1,0 +1,88 @@
+@import "footer.css";
+@import "nav.css";
+@import "generic.css";
+
+
+#page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "nav nav" "featureblog featureblog" "post1 post2" "post1 post2" "post3 post3" "ft ft";
+}
+
+.blog {
+    padding: 10px;
+    margin: 10px;
+    font-size: 2.5vw;
+    display: flex;
+    width: 90%;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.blog:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+
+#feature-blog {
+    width: 100%;
+    height: 80vh;
+    grid-area: featureblog;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/banaras.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#upcoming-blog1 {
+    width: 100%;
+    height: 50vh;
+    grid-area: post1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/varanasiman");
+    background-size: cover;
+}
+
+#upcoming-blog2 {
+    width: 100%;
+    height: 50vh;
+    grid-area: post2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/station.jpg");
+    background-size: cover;
+}
+
+#upcoming-blog3 {
+    width: 100%;
+    height: 50vh;
+    grid-area: post3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/varanasimanghat");
+    background-size: cover;
+}
+
+footer p {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .blog {
+        font-size: medium;
+    }
+    footer p {
+        display: inline-block;
+    }
+}

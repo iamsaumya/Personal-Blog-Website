@@ -1,0 +1,140 @@
+@import "footer.css";
+@import "nav.css";
+@import "generic.css";
+
+
+body {
+    background: linear-gradient(rgb(223, 227, 230), rgb(233, 231, 230));
+    color: black;
+}
+
+article {
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+article p {
+    padding-bottom: 20px;
+}
+
+p:hover {
+    color: orangered;
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: darkred;
+}
+
+blockquote{
+    padding-bottom: 15px;
+}
+#blog-post {
+    display: grid;
+    grid-template-columns: 5vw 1fr 1fr 5vw;
+    grid-template-areas: "nav nav nav nav" "space heading heading space2" "space author author space2" "space pi content1 space2" "space content2 content2 space2" "si si si si" "subscription subscription subscription subscription" "ft ft ft ft";
+}
+
+#primary-image {
+    background: linear-gradient(rgb(223, 227, 230), rgb(233, 231, 230));
+    grid-area: pi;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    padding-top: 10px;
+    max-width: 100%;
+    height: auto;
+    /*border: 4px solid aliceblue;*/
+}
+
+#blog-content-1 {
+    grid-area: content1;
+}
+
+#blog-content-2 {
+    grid-area: content2;
+}
+
+#secondary-image {
+    grid-area: si;
+}
+
+#secondary-image > img {
+    width: 100%;
+}
+
+
+#blog-title {
+    padding: 20px;
+    grid-area: heading;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#subscription {
+    padding: 10px 0;
+    grid-area: subscription;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#subscription p{
+    font-size: 30px;
+    padding: 10px;
+}
+#subscription-button {
+    margin: 10px;
+}
+
+#author{
+    grid-area: author;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #222222;
+}
+
+
+#author > img{
+    margin: 10px;
+    width: 13%;
+    height: auto;
+    border-radius: 100%;
+}
+
+#author_details > p {
+    margin:10px;
+}
+@media (max-width: 600px) {
+    #blog-post {
+        grid-template-columns: 1fr;
+        grid-template-areas: "nav" "heading" "author" "pi" "content1" "si" "content2" "subscription" "ft";
+        grid-gap: 0;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    button{
+        font-size: 15px;
+    }
+    #author > img{
+        width: 25vw;
+    }
+
+}
